@@ -22,7 +22,6 @@
 %rename(Hash) CHash;
 %rename(StructuredData) CStructuredData;
 %rename(DynamicObjectArray) CDynamicObjectArray;
-%rename(WrappedObjectArray) CWrappedObjectArray;
 %rename(Tokenizer) CTokenizer;
 %rename(DelimiterTokenizer) CDelimiterTokenizer;
 %rename(NGramTokenizer) CNGramTokenizer;
@@ -399,7 +398,17 @@ namespace shogun
 %include <shogun/lib/StructuredDataTypes.h>
 %include <shogun/lib/StructuredData.h>
 %include <shogun/lib/DynamicObjectArray.h>
-%include <shogun/lib/WrappedObjectArray.h>
+namespace shogun
+{
+    /* Specialize DynamicObjectArray::append_element function */
+    %template(append_element_real) CDynamicObjectArray::append_element<float64_t>;
+    %template(append_element_float) CDynamicObjectArray::append_element<float32_t>;
+    %template(append_element_int) CDynamicObjectArray::append_element<int32_t>;
+    %template(append_element_real_vector) CDynamicObjectArray::append_element<SGVector<float64_t>>;
+    %template(append_element_float_vector) CDynamicObjectArray::append_element<SGVector<float32_t>>;
+    %template(append_element_real_matrix) CDynamicObjectArray::append_element<SGMatrix<float64_t>>;
+    %template(append_element_float_matrix) CDynamicObjectArray::append_element<SGMatrix<float32_t>>;
+}
 %include <shogun/lib/IndexBlock.h>
 %include <shogun/lib/IndexBlockRelation.h>
 %include <shogun/lib/IndexBlockGroup.h>
