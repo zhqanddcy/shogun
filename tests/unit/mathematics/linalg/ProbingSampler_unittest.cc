@@ -6,7 +6,7 @@
  *
  * Written (W) 2013 Soumyajit De
  */
-
+#include <gtest/gtest.h>
 #include <shogun/lib/config.h>
 
 #ifdef HAVE_COLPACK
@@ -19,7 +19,6 @@
 #include <shogun/mathematics/linalg/linop/SparseMatrixOperator.h>
 #include <shogun/mathematics/linalg/ratapprox/tracesampler/ProbingSampler.h>
 #include <ColPack/ColPackHeaders.h>
-#include <gtest/gtest.h>
 
 using namespace std;
 using namespace shogun;

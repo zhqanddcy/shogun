@@ -27,6 +27,7 @@
  * of the authors and should not be interpreted as representing official policies,
  * either expressed or implied, of the Shogun Development Team.
  */
+#include <gtest/gtest.h>
 
 #include <shogun/lib/config.h>
 
@@ -44,7 +45,6 @@
 
 #include <algorithm>
 #include <numeric>
-#include <gtest/gtest.h>
 
 using namespace shogun;
 

@@ -28,6 +28,7 @@
  * of the authors and should not be interpreted as representing official policies,
  * either expressed or implied, of the Shogun Development Team.
  */
+#include <gtest/gtest.h>
 
 #include <shogun/lib/config.h>
 
@@ -36,7 +37,6 @@
 #include <shogun/mathematics/Function.h>
 #include <shogun/mathematics/Integration.h>
 #include <shogun/lib/SGVector.h>
-#include <gtest/gtest.h>
 
 using namespace shogun;
 
